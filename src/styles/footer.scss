@@ -1,0 +1,59 @@
+@import '../common/common-css-rules.scss';
+
+.footer {
+  background: $black;
+  color: rgba(255, 255, 255, 0.61);
+  height: auto;
+  margin: 2.625rem 0 0;
+
+  .footer-container {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0 1rem;
+
+    @include md {
+      display: flex;
+      align-items: center;
+      margin: auto 2rem;
+      gap: 2.5rem;
+    }
+
+    .footer-logo {
+      width: 5rem;
+      overflow: hidden;
+
+      img {
+        border-radius: 50%;
+        object-fit: contain;
+      }
+
+      @include lg {
+        width: 3.4rem;
+      }
+
+      @include md {
+        width: 4rem;
+      }
+
+      @include sm {
+        width: 10rem;
+      }
+    }
+
+    @include lg {
+      margin: 0 10rem;
+    }
+
+    .footer-content {
+      .copyright {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @include sm {
+    margin: auto;
+  }
+}
