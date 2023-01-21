@@ -1,0 +1,20 @@
+@import './common/common-css-rules.scss';
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $ff-nunito;
+}
+
+body {
+  background: $color-primary;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
