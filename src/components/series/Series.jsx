@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getAllShows } from '../../redux/movieSlice';
+import { getEpisodes } from '../../redux/movieSlice';
 import Card from '../card/Card';
 import '../../styles/movieList.scss';
 
-const Shows = () => {
-  const shows = useSelector(getAllShows);
+const Series = () => {
+  const shows = useSelector(getEpisodes);
   let renderMovies = '';
 
   renderMovies = shows.Response === 'True' ? (
-    shows.Search.map((show) => (
+    shows.Episodes.map((show) => (
       <Card key={show.index} data={show} />
     ))
   ) : (
@@ -26,4 +26,4 @@ const Shows = () => {
   );
 };
 
-export default Shows;
+export default Series;
